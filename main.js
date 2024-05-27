@@ -1,6 +1,3 @@
-let main = document.querySelector("main")
-
-
 fetch("https://fakestoreapi.com/users")
     .then(res => res.json())
     .then(users => myFunction(users))
@@ -9,6 +6,8 @@ fetch("https://fakestoreapi.com/users")
 
 let myFunction = (users) => {
     users.forEach(user => {
+        let main = document.querySelector("main")
+
         let container = document.createElement("div")
         let name = document.createElement("h1")
         let username = document.createElement("h2")
@@ -24,5 +23,3 @@ let myFunction = (users) => {
         main.appendChild(container)
     });
 }
-
-myFunction()
